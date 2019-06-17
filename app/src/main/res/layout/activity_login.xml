@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.LoginActivity"
+    android:orientation="horizontal"
+    >
+    <ScrollView
+        android:visibility="visible"
+        android:id="@+id/login_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rsz_background">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/hamba_white"/>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:text="Welcome to Hamba"
+                        android:layout_width="wrap_content"
+                        style="@style/label_style"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="Phone Number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <LinearLayout
+                        android:background="@drawable/gray_rounded_corners"
+                        android:layout_width="@dimen/_280sdp"
+                        android:minWidth="@dimen/_280sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="2dp">
+                        <com.rilixtech.CountryCodePicker
+                            android:layout_marginStart="8dp"
+                            app:ccp_textColor="@color/colorAccent"
+                            app:ccp_showFullName="false"
+                            android:id="@+id/ccp"
+                            app:ccp_hideNameCode="true"
+                            app:ccp_enableHint="false"
+                            app:ccp_defaultCode="91"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_margin="6dp"
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/vertical_liine"/>
+                        <EditText
+                            android:backgroundTint="@color/colortrans"
+                            android:layout_marginEnd="8dp"
+                            android:id="@+id/phone_no"
+                            android:inputType="phone"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Please enter contact number"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/register"
+                        android:layout_margin="8dp"
+                        android:text="Login"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:minWidth="@dimen/_230sdp"
+                        android:layout_width="@dimen/_230sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/accent_btn"/>
+
+                </LinearLayout>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Or login with"/>
+
+                <LinearLayout
+
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/btn_fb"
+                    android:clickable="true"
+                    android:maxWidth="@dimen/_300sdp"
+                    android:minWidth="@dimen/_220sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center|start"
+                    android:background="@drawable/fb_button"
+                    android:elevation="5dp"
+                    >
+                    <ImageView
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/fb_icon"
+                        android:scaleType="centerInside"/>
+                    <ImageView
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/vertical_liine"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:text="Login with facebook"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clickable="true"
+                    android:id="@+id/btn_insta"
+
+                    android:maxWidth="@dimen/_300sdp"
+                    android:minWidth="@dimen/_220sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center|start"
+                    android:elevation="5dp"
+                    android:background="@drawable/instagram_btn"
+                    >
+                    <ImageView
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/instagram_logo"
+                        android:scaleType="centerInside"/>
+                    <ImageView
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/vertical_liine"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:text="Login with instagram"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_gmail"
+                    android:clickable="true"
+                    android:layout_marginTop="8dp"
+                    android:maxWidth="@dimen/_300sdp"
+                    android:minWidth="@dimen/_220sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center|start"
+                    android:elevation="5dp"
+                    android:background="@drawable/google_button">
+                    <ImageView
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/google_icon"
+                        android:scaleType="centerInside"/>
+                    <ImageView
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/vertical_liine"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:text="Login with gmail"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_line">
+                    <TextView
+                        android:textSize="16sp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login as guest"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+        <LinearLayout
+            android:background="@drawable/verify_code_bg"
+            android:visibility="gone"
+            android:id="@+id/verify_view"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter 6 digit code"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="We sent a text message with a security pin to verify your phone number"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/primary_button">
+
+                <EditText
+                    android:id="@+id/code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/colortrans"
+                    android:gravity="center"
+                    android:hint="0 0 0 0 0 0"
+                    android:inputType="numberPassword"
+                    android:maxLength="6"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/verify_btn"
+                    android:layout_width="260dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/accent_btn"
+                    android:text="Verify code"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/resend_otp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:text="Problems receiving your pin?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+</LinearLayout>

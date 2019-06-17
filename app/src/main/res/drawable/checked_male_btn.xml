@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+
+        >
+        <shape android:shape="rectangle">
+            <corners android:radius="100dp"/>
+    <solid android:color="@color/colorPrimaryDark"/>
+        </shape>
+
+    </item>
+    <item
+        android:width="20dp"
+        android:height="20dp" android:top="2dp" android:bottom="2dp" android:right="2dp" android:left="2dp">
+
+    <bitmap android:src="@drawable/male"
+            android:tint="@color/colorWhite" />
+    </item>
+
+</layer-list>

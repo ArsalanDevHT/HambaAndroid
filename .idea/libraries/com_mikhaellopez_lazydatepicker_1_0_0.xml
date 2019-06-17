@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.mikhaellopez:lazydatepicker-1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lazydatepicker-1.0.0.aar/3dfa63a9b8cbd625a446678ea0d519c3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lazydatepicker-1.0.0.aar/3dfa63a9b8cbd625a446678ea0d519c3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikhaellopez/lazydatepicker/1.0.0/526f8eb41edd04c63309f1c82992efe2e762dcb3/lazydatepicker-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

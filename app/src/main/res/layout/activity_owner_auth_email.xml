@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/rsz_congratulation_bg">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.OwnerAuthEmailActivity"
+        android:orientation="vertical"
+        android:gravity="center|top">
+        <ImageView
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:src="@drawable/hamba"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_255sdp"
+            android:src="@drawable/rsz_congretzicon"
+            android:layout_gravity="center|top"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="50dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center|top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Congratulations"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                style="@style/heading_style"/>
+            <TextView
+                android:id="@+id/text1"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center|top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You are all set to start enjoying smiles!"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                style="@style/label_style"/>
+            <TextView
+                android:id="@+id/text2"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_gravity="center|top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We have sent you a welcome email with a link to verify"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                style="@style/label_style"/>
+            <TextView
+                android:id="@+id/text3"
+                android:layout_marginTop="@dimen/_45sdp"
+                android:layout_gravity="center|top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="your email address. Link expires in 24 hours"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                style="@style/label_style"/>
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/btn_done"
+                android:layout_margin="8dp"
+                android:text="Done"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/primary_button"/>
+
+        </LinearLayout>
+        <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/help_webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,379 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 43515904 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2640), pid=3980, tid=0x00007f15f0b71700
+#
+# JRE version:  (8.0_152-b01) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b01 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f15e8012000):  JavaThread "Unknown thread" [_thread_in_vm, id=3985, stack(0x00007f15f0a72000,0x00007f15f0b72000)]
+
+Stack: [0x00007f15f0a72000,0x00007f15f0b72000],  sp=0x00007f15f0b705c0,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x9ed02d]  VMError::report_and_die()+0x15d
+V  [libjvm.so+0x4b99fa]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x8a
+V  [libjvm.so+0x852c20]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0xf0
+V  [libjvm.so+0x84d72f]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x1f
+V  [libjvm.so+0x8c448b]  PSVirtualSpace::expand_by(unsigned long)+0x5b
+V  [libjvm.so+0x8b6408]  PSOldGen::initialize(ReservedSpace, unsigned long, char const*, int)+0xa8
+V  [libjvm.so+0x2c4b13]  AdjoiningGenerations::AdjoiningGenerations(ReservedSpace, GenerationSizer*, unsigned long)+0x353
+V  [libjvm.so+0x876d61]  ParallelScavengeHeap::initialize()+0x211
+V  [libjvm.so+0x9b8539]  Universe::initialize_heap()+0x189
+V  [libjvm.so+0x9b8733]  universe_init()+0x33
+V  [libjvm.so+0x5e1dd5]  init_globals()+0x55
+V  [libjvm.so+0x99bb53]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x2b3
+V  [libjvm.so+0x64fd72]  JNI_CreateJavaVM+0x52
+C  [libjli.so+0x77c8]  JavaMain+0x88
+C  [libpthread.so.0+0x76db]  start_thread+0xdb
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007f15e8012000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3985, stack(0x00007f15f0a72000,0x00007f15f0b72000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 fd:00 6031002                            /opt/android-studio/jre/bin/java
+00600000-00601000 r--p 00000000 fd:00 6031002                            /opt/android-studio/jre/bin/java
+00601000-00602000 rw-p 00001000 fd:00 6031002                            /opt/android-studio/jre/bin/java
+0130f000-01330000 rw-p 00000000 00:00 0                                  [heap]
+fe980000-feb00000 ---p 00000000 00:00 0 
+feb00000-fff80000 rw-p 00000000 00:00 0 
+fff80000-100000000 ---p 00000000 00:00 0 
+7f15d9000000-7f15d9270000 rwxp 00000000 00:00 0 
+7f15d9270000-7f15e8000000 ---p 00000000 00:00 0 
+7f15e8000000-7f15e803c000 rw-p 00000000 00:00 0 
+7f15e803c000-7f15ec000000 ---p 00000000 00:00 0 
+7f15ed5b6000-7f15ed838000 rw-p 00000000 00:00 0 
+7f15ed838000-7f15edbee000 ---p 00000000 00:00 0 
+7f15edbee000-7f15edc08000 r-xp 00000000 fd:00 6031089                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7f15edc08000-7f15ede08000 ---p 0001a000 fd:00 6031089                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7f15ede08000-7f15ede09000 r--p 0001a000 fd:00 6031089                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7f15ede09000-7f15ede0a000 rw-p 0001b000 fd:00 6031089                    /opt/android-studio/jre/jre/lib/amd64/libzip.so
+7f15ede0a000-7f15ede15000 r-xp 00000000 fd:00 3150629                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f15ede15000-7f15ee014000 ---p 0000b000 fd:00 3150629                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f15ee014000-7f15ee015000 r--p 0000a000 fd:00 3150629                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f15ee015000-7f15ee016000 rw-p 0000b000 fd:00 3150629                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f15ee016000-7f15ee01c000 rw-p 00000000 00:00 0 
+7f15ee01c000-7f15ee033000 r-xp 00000000 fd:00 3150623                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f15ee033000-7f15ee232000 ---p 00017000 fd:00 3150623                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f15ee232000-7f15ee233000 r--p 00016000 fd:00 3150623                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f15ee233000-7f15ee234000 rw-p 00017000 fd:00 3150623                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f15ee234000-7f15ee236000 rw-p 00000000 00:00 0 
+7f15ee236000-7f15ee241000 r-xp 00000000 fd:00 3150640                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f15ee241000-7f15ee440000 ---p 0000b000 fd:00 3150640                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f15ee440000-7f15ee441000 r--p 0000a000 fd:00 3150640                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f15ee441000-7f15ee442000 rw-p 0000b000 fd:00 3150640                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f15ee442000-7f15ee44a000 r-xp 00000000 fd:00 3150625                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f15ee44a000-7f15ee64a000 ---p 00008000 fd:00 3150625                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f15ee64a000-7f15ee64b000 r--p 00008000 fd:00 3150625                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f15ee64b000-7f15ee64c000 rw-p 00009000 fd:00 3150625                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f15ee64c000-7f15ee679000 r-xp 00000000 fd:00 6031097                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7f15ee679000-7f15ee878000 ---p 0002d000 fd:00 6031097                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7f15ee878000-7f15ee879000 r--p 0002c000 fd:00 6031097                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7f15ee879000-7f15ee87b000 rw-p 0002d000 fd:00 6031097                    /opt/android-studio/jre/jre/lib/amd64/libjava.so
+7f15ee87b000-7f15ee88b000 r-xp 00000000 fd:00 6031085                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7f15ee88b000-7f15eea8a000 ---p 00010000 fd:00 6031085                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7f15eea8a000-7f15eea8c000 r--p 0000f000 fd:00 6031085                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7f15eea8c000-7f15eea8d000 rw-p 00011000 fd:00 6031085                    /opt/android-studio/jre/jre/lib/amd64/libverify.so
+7f15eea8d000-7f15eea94000 r-xp 00000000 fd:00 3150680                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f15eea94000-7f15eec93000 ---p 00007000 fd:00 3150680                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f15eec93000-7f15eec94000 r--p 00006000 fd:00 3150680                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f15eec94000-7f15eec95000 rw-p 00007000 fd:00 3150680                    /lib/x86_64-linux-gnu/librt-2.27.so
+7f15eec95000-7f15eee32000 r-xp 00000000 fd:00 3150602                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f15eee32000-7f15ef031000 ---p 0019d000 fd:00 3150602                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f15ef031000-7f15ef032000 r--p 0019c000 fd:00 3150602                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f15ef032000-7f15ef033000 rw-p 0019d000 fd:00 3150602                    /lib/x86_64-linux-gnu/libm-2.27.so
+7f15ef033000-7f15efc2f000 r-xp 00000000 fd:00 6031107                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7f15efc2f000-7f15efe2f000 ---p 00bfc000 fd:00 6031107                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7f15efe2f000-7f15efecf000 r--p 00bfc000 fd:00 6031107                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7f15efecf000-7f15efef8000 rw-p 00c9c000 fd:00 6031107                    /opt/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7f15efef8000-7f15eff3c000 rw-p 00000000 00:00 0 
+7f15eff3c000-7f15eff56000 r-xp 00000000 fd:00 3150672                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f15eff56000-7f15f0155000 ---p 0001a000 fd:00 3150672                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f15f0155000-7f15f0156000 r--p 00019000 fd:00 3150672                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f15f0156000-7f15f0157000 rw-p 0001a000 fd:00 3150672                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f15f0157000-7f15f015b000 rw-p 00000000 00:00 0 
+7f15f015b000-7f15f015e000 r-xp 00000000 fd:00 3150562                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f15f015e000-7f15f035d000 ---p 00003000 fd:00 3150562                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f15f035d000-7f15f035e000 r--p 00002000 fd:00 3150562                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f15f035e000-7f15f035f000 rw-p 00003000 fd:00 3150562                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7f15f035f000-7f15f0546000 r-xp 00000000 fd:00 3150539                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f15f0546000-7f15f0746000 ---p 001e7000 fd:00 3150539                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f15f0746000-7f15f074a000 r--p 001e7000 fd:00 3150539                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f15f074a000-7f15f074c000 rw-p 001eb000 fd:00 3150539                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f15f074c000-7f15f0750000 rw-p 00000000 00:00 0 
+7f15f0750000-7f15f0766000 r-xp 00000000 fd:00 6030990                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7f15f0766000-7f15f0965000 ---p 00016000 fd:00 6030990                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7f15f0965000-7f15f0966000 r--p 00015000 fd:00 6030990                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7f15f0966000-7f15f0967000 rw-p 00016000 fd:00 6030990                    /opt/android-studio/jre/lib/amd64/jli/libjli.so
+7f15f0967000-7f15f098e000 r-xp 00000000 fd:00 3150511                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f15f0a50000-7f15f0a65000 ---p 00000000 00:00 0 
+7f15f0a65000-7f15f0a71000 rw-p 00000000 00:00 0 
+7f15f0a71000-7f15f0a72000 ---p 00000000 00:00 0 
+7f15f0a72000-7f15f0a75000 ---p 00000000 00:00 0 
+7f15f0a75000-7f15f0b74000 rw-p 00000000 00:00 0 
+7f15f0b82000-7f15f0b8a000 rw-s 00000000 fd:00 7088400                    /tmp/hsperfdata_shahzaib/3980
+7f15f0b8a000-7f15f0b8b000 rw-p 00000000 00:00 0 
+7f15f0b8b000-7f15f0b8c000 r--p 00000000 00:00 0 
+7f15f0b8c000-7f15f0b8e000 rw-p 00000000 00:00 0 
+7f15f0b8e000-7f15f0b8f000 r--p 00027000 fd:00 3150511                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f15f0b8f000-7f15f0b90000 rw-p 00028000 fd:00 3150511                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f15f0b90000-7f15f0b91000 rw-p 00000000 00:00 0 
+7ffebf516000-7ffebf53a000 rw-p 00000000 00:00 0                          [stack]
+7ffebf596000-7ffebf599000 r--p 00000000 00:00 0                          [vvar]
+7ffebf599000-7ffebf59b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx64M -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant 
+java_command: com.google.devtools.build.android.desugar.Desugar --input /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/classes/debug --output /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/desugar/debug/0 --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/classes/debug --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/23.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/31.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/66.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/91.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/5.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/49.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/74.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/83.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/75.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/57.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/14.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stackFramesFixer/debug/40.jar --classpath_entry /home/shahzaib/AndroidStudioProjects/Mashoor/app/build/intermediates/transforms/stac
+java_class_path (initial): /tmp/desugar_deploy.jar6204033513459866600
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+USERNAME=shahzaib
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x9edb30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0x9edb30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x84e800], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x84e800], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x84e800], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x84e800], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x84e6d0], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.2 LTS"
+
+uname:Linux 4.18.0-17-generic #18~18.04.1-Ubuntu SMP Fri Mar 15 15:27:12 UTC 2019 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 15216, NOFILE 1048576, AS infinity
+load average:2.35 1.47 1.29
+
+/proc/meminfo:
+MemTotal:        3941844 kB
+MemFree:           84288 kB
+MemAvailable:       4980 kB
+Buffers:            1172 kB
+Cached:           246544 kB
+SwapCached:          624 kB
+Active:          3007848 kB
+Inactive:         613728 kB
+Active(anon):    2990700 kB
+Inactive(anon):   598356 kB
+Active(file):      17148 kB
+Inactive(file):    15372 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:       1003516 kB
+SwapFree:             84 kB
+Dirty:               324 kB
+Writeback:             0 kB
+AnonPages:       3373792 kB
+Mapped:           105344 kB
+Shmem:            214556 kB
+Slab:             104340 kB
+SReclaimable:      45380 kB
+SUnreclaim:        58960 kB
+KernelStack:       15792 kB
+PageTables:        58072 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     2974436 kB
+Committed_AS:    9364432 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      199236 kB
+DirectMap2M:     3897344 kB
+DirectMap1G:           0 kB
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i3-4005U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x24
+cpu MHz		: 1696.059
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3392.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i3-4005U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x24
+cpu MHz		: 1696.056
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3392.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i3-4005U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x24
+cpu MHz		: 1696.053
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3392.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i3-4005U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x24
+cpu MHz		: 1696.055
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3392.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3941844k(84752k free), swap 1003516k(184k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b01) for linux-amd64 JRE (1.8.0_152-release-1024-b01), built by "builder" with gcc 4.8.4
+
+time: Thu May  9 03:06:41 2019
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

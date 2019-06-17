@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "net.hamba.android"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+    // Flag to tell aapt to keep the attribute ids around
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "com.android.support:design:28.0.0"
+    //country code picker
+    implementation 'com.github.joielechong:countrycodepicker:2.3.0'
+
+    //firebase
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-auth:16.2.1'
+    implementation 'com.google.firebase:firebase-database:16.1.0'
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
+    implementation 'com.google.firebase:firebase-messaging:17.6.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:17.0.0'
+    implementation 'com.firebase:geofire-android:2.3.1'
+    implementation 'com.facebook.android:facebook-android-sdk:4.41.0'
+    implementation 'com.facebook.android:facebook-login:4.38.1'
+
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.android.gms:play-services-places:16.1.0'
+
+    // Expandable Layout
+
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+
+    //toggelbutton
+    implementation 'com.nightonke:jellytogglebutton:1.0.2'
+
+    //responsive library
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //http core
+    implementation 'org.apache.httpcomponents:httpcore:4.4.5'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.2'
+
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    //slider
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // cardview
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    //lazy date picker
+    implementation 'com.mikhaellopez:lazydatepicker:1.0.0'
+    //steps view
+    implementation 'com.shuhart.stepview:stepview:1.5.0'
+    implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+    //hmspicker
+    implementation 'com.code-troopers.betterpickers:library:3.1.0'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //Retrofit
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+
+}
+apply plugin: 'com.google.gms.google-services'

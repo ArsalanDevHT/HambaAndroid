@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UserNameActivity"
+    android:background="@drawable/hello_bg">
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:layout_alignEnd="@+id/ll_please"
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/img_robot"
+        android:layout_above="@+id/ll_username"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:src="@drawable/robot_"
+        />
+    <ImageView
+        android:id="@+id/img_hello"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/hello_"
+        android:layout_toStartOf="@+id/img_robot"
+        android:layout_above="@+id/ll_please"
+        />
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:elevation="2dp"
+        android:id="@+id/ll_username"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/accent_btn"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:orientation="horizontal">
+        <EditText
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:backgroundTint="@color/colortrans"
+            android:layout_margin="@dimen/_8sdp"
+            android:id="@+id/username"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="SOPHIA jACOB"
+            android:textSize="18sp" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/counter"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="0/6"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_above="@+id/ll_username"
+        android:id="@+id/ll_please"
+        android:layout_marginEnd="@dimen/_130sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="enter your good name"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/ll_username"
+        android:id="@+id/ll_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:gravity="center">
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btn_enter"
+            android:layout_margin="8dp"
+            android:text="Enter"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:minWidth="@dimen/_150sdp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/primary_button"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

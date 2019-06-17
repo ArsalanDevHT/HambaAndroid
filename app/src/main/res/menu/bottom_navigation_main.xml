@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+    android:enabled="true"
+    android:title="Home"
+    android:icon="@drawable/ic_action_home"
+    app:showAsAction="always" />
+    <item
+        android:id="@+id/action_profile"
+        android:enabled="true"
+        android:title="Profile"
+        android:icon="@drawable/ic_action_profile"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_order"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_order"
+        android:title="Order"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_tracking"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_tracking"
+        android:title="Tracking"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_search"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_search"
+        android:title="Search"
+        app:showAsAction="always" />
+    <!--<item-->
+        <!--android:id="@+id/action_chat"-->
+        <!--android:enabled="true"-->
+        <!--android:icon="@drawable/ic_action_chat"-->
+        <!--android:title="Chat"-->
+        <!--app:showAsAction="always" />-->
+</menu>

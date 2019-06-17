@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.OwnerEmployeeActivity"
+    android:background="@drawable/rsz_background"
+    android:orientation="vertical"
+    android:gravity="center">
+    <net.hamba.android.Customes.CircularImageView
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/mashoor_logo"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:text="Welcome to "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Mashoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center">
+            <Button
+                android:id="@+id/shop"
+                android:layout_margin="8dp"
+                android:text="Owner"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:minWidth="@dimen/_230sdp"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accent_btn"/>
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+            <Button
+                android:id="@+id/customer"
+                android:layout_margin="8dp"
+                android:text="Employee"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:minWidth="@dimen/_230sdp"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accent_btn"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

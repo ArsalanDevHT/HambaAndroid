@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_26sdp"
+    android:gravity="center|start|top"
+    android:id="@+id/country_code_holder_rly">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/click_consumer_rly">
+
+        <net.hamba.android.Customes.CircularImageView
+            android:id="@+id/flag_imv"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/flag_pakistan"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:layout_toEndOf="@+id/flag_imv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/selected_country_tv"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:text="some"
+            />
+        <ImageView
+            android:id="@+id/arrow_imv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            android:visibility="gone"/>
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flag_holder_lly"
+            android:visibility="gone">
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
